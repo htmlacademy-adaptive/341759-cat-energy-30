@@ -5,3 +5,9 @@
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+
+body {
+  $bg-color: rgb(50, 26, 26);
+  background-color: $bg-color;
+
+}
