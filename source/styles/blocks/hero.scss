@@ -1,3 +1,23 @@
 .hero {
 
 }
+
+.hero__wrapper {
+  background-color: $brend-color;
+}
+
+.hero__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $second-color-text;
+  text-align: center;
+}
+
+.hero__description {
+  font-family: "Oswald", sans-serif;
+  line-height: 14px;
+  color: $second-color-text;
+  text-align: center;
+}

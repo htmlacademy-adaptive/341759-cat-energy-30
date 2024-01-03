@@ -1,3 +1,10 @@
 .action {
+ background-color: $brend-color;
+}
 
+.action__description {
+  font-style: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $second-color_text;
 }

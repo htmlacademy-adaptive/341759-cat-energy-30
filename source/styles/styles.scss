@@ -1,5 +1,6 @@
 /* GLOBAL */
 @import "./global/variables.scss";
+@import "./global/mixins.scss";
 @import "./global/fonts.scss";
 @import "./global/global.scss";
 @import "./global/visually-hidden.scss";
@@ -7,11 +8,11 @@
 
 /* BLOCKS */
 @import "./blocks/page.scss";
+@import "./blocks/button.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/main-container.scss";
 @import "./blocks/hero.scss";
-@import "./blocks/button.scss";
 @import "./blocks/programs.scss";
 @import "./blocks/advantages.scss";
 @import "./blocks/example.scss";
@@ -25,8 +26,6 @@
 @import "./blocks/card-description.scss";
 @import "./blocks/more-card.scss";
 @import "./blocks/additionally.scss";
-@import "./blocks/additionally-wrapper.scss";
 @import "./blocks/action.scss";
-@import "./blocks/action-wrapper.scss";
 // form
 @import "./blocks/questionnaire.scss";

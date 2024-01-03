@@ -1,3 +1,43 @@
 .questionnaire {
 
 }
+
+.questionnaire__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $standart-color-text;
+}
+
+.questionnaire__description {
+  font-family: "Oswald", sans-serif;
+  color: $standart-color-text;
+  text-transform: uppercase;
+}
+
+.questionnaire__list {
+list-style-type: none;
+}
+
+.questionnaire__label,
+.questionnaire__input {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.questionnaire__heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+
+}
+
+.questionnaire__required {
+  line-height: 16px;
+  color: $standart-color-text;
+}

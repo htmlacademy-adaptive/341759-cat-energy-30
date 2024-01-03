@@ -1,3 +1,11 @@
 .main-footer {
 
 }
+
+.main-footer__copyright-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $base-color-text;
+  text-decoration: none;
+}
