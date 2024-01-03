@@ -1,3 +1,29 @@
 .additionally {
 
 }
+
+.additionally__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $standart-color-text;
+}
+
+.additionally__list {
+  list-style-type: none;
+}
+
+.additionally__item-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $product-color-text;
+  text-transform: uppercase;
+}
+
+.additionally__item-description,
+.additionally__item-price {
+  line-height: 14px;
+}

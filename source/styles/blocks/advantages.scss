@@ -1,3 +1,15 @@
 .advantages {
 
 }
+
+.advantages__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: $standart-color-text;
+}
+
+.advantages__list {
+  list-style-type: none;
+}
