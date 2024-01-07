@@ -348,8 +348,10 @@
       <section class="main-footer">
         <h2 class="visually-hidden">Соцсети</h2>
         <div class="main-footer__wrapper">
-          <a class="main-footer__logo-text" href="/source/index.html">
-            <img src="/source/images/logo-text.png" alt="Текстовый логотип Cat energy" width="128" height="24">
+          <a class="main-footer__logo-text" href="index.html">
+            <picture class="slider__images">
+              <img src="images/logo-text@1x.png" srcset="images/logo-text@2x.png 2x" width="128" height="24" alt="Текстовый логотип Cat energy">
+            </picture>
           </a>
           <div class="main-footer__social">
             <ul class="main-footer__social-list">
@@ -372,6 +374,9 @@
           </div>
           <div class="main-footer__copyright">
             <a class="main-footer__copyright-link main-footer__copyright-link--logo" href="#">HTML Academy</a>
+            <svg class="main-footer__copyright-link--logo" width="27" height="34">
+              <use href="../../images/icons/stack.svg#html-academy"></use>
+            </svg>
           </div>
         </div>
       </section>
