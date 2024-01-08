@@ -69,15 +69,25 @@
         <div class="programs__wrapper">
           <h2 class="visually-hidden">Программы питания</h2>
           <ul class="programs__list">
-            <li class="programs__item programs__item--fat">
+            <li class="programs__item">
+              <div class="programs__item-image programs__item-image--fat">
+                <svg width="36" height="50"  >
+                  <use href="../../images/icons/stack.svg#cat-back-sit"></use>
+                </svg>
+              </div>
               <h3 class="programs__item-title">Похудение</h3>
               <p class="programs__item-description">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="programs__item-link programs__item-link--arrow" href="#">Каталог slim</a>
+              <a class="programs__item-link programs__item-link--arrow" href="catalog.html">Каталог slim</a>
             </li>
-            <li class="programs__item programs__item--thin">
+            <li class="programs__item">
+              <div class="programs__item-image programs__item-image--thin">
+                <svg width="67" height="28"  >
+                  <use href="../../images/icons/stack.svg#cat-back"></use>
+                </svg>
+              </div>
               <h3 class="programs__item-title">Набор массы</h3>
               <p class="programs__item-description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programs__item-link programs__item-link--arrow" href="#">Каталог pro</a>
+              <a class="programs__item-link programs__item-link--arrow" href="catalog.html">Каталог pro</a>
             </li>
           </ul>
         </div>
@@ -86,16 +96,32 @@
         <div class="advantages__wrapper">
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--eco">
+            <li class="advantages__item">
+              <svg class="advantages__item--eco" width="24" height="28">
+                <use href="../../images/icons/stack.svg#eco"></use>
+              </svg>
+              <span class="advantages__item-background">1</span>
               Функциональное питание содержит только полезные питательные вещества.
             </li>
-            <li class="advantages__item advantages__item--water">
+            <li class="advantages__item">
+              <svg class="advantages__item--water" width="26" height="28">
+                <use href="../../images/icons/stack.svg#water"></use>
+              </svg>
+              <span class="advantages__item-background">2</span>
               Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
             </li>
-            <li class="advantages__item advantages__item--food">
+            <li class="advantages__item">
+              <svg class="advantages__item--food" width="24" height="28">
+                <use href="../../images/icons/stack.svg#food"></use>
+              </svg>
+              <span class="advantages__item-background">3</span>
               Замените один-два приема обычной еды на&nbsp;наше функциональное питание.
             </li>
-            <li class="advantages__item advantages__item--result">
+            <li class="advantages__item">
+              <svg class="advantages__item--result" width="26" height="28">
+                <use href="../../images/icons/stack.svg#result"></use>
+              </svg>
+              <span class="advantages__item-background">4</span>
               Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!
             </li>
           </ul>
@@ -125,12 +151,14 @@
           </dl>
           <p class="example__description-footer"><span>Затраты на питание:</span> <span>15 000 РУБ.</span></p>
           <div class="example__slider slider">
-            <div class="slider__images">
-              <img class="slider__image slider__image--before" src="#" width="280" height="256"
-                alt="Толстый кот">
-              <img class="slider__image slider__image--after" src="#" width="280" height="256"
-                alt="Худой кот">
-            </div>
+            <picture class="slider__images">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-before@1x.png 1x, images/cat-before@2x.png 2x" width="560" height="512">
+              <img class="slider__image slider__image--before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+            </picture>
+            <picture>
+              <source type="image/png" media="(min-width: 768px)" srcset="images/cat-after@1x.png 1x, images/cat-after@2x.png 2x" width="560" height="512">
+              <img class="slider__image slider__image--after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Худой кот">
+            </picture>
             <button class="slider__button" type="button">
               <span class="visually-hidden">Сравнение</span>
             </button>
@@ -151,8 +179,10 @@
       <section class="main-footer">
         <h2 class="visually-hidden">Соцсети</h2>
         <div class="main-footer__wrapper">
-          <a class="main-footer__logo-text" href="/source/index.html">
-            <img src="/source/images/logo-text.png" alt="Текстовый логотип Cat energy" width="128" height="24">
+          <a class="main-footer__logo-text" href="index.html">
+            <picture class="slider__images">
+              <img src="images/logo-text@1x.png" srcset="images/logo-text@2x.png 2x" width="128" height="24" alt="Текстовый логотип Cat energy">
+            </picture>
           </a>
           <div class="main-footer__social">
             <ul class="main-footer__social-list">
@@ -174,7 +204,10 @@
             </ul>
           </div>
           <div class="main-footer__copyright">
-            <a class="main-footer__copyright-link main-footer__copyright-link--logo" href="#">HTML Academy</a>
+            <a class="main-footer__copyright-link" href="#">HTML Academy</a>
+            <svg class="main-footer__copyright-link--logo" width="27" height="34">
+              <use href="../../images/icons/stack.svg#html-academy"></use>
+            </svg>
           </div>
         </div>
       </section>

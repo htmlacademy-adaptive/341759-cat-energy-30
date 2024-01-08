@@ -13,3 +13,46 @@
 .advantages__list {
   list-style-type: none;
 }
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.advantages__item--eco {
+  margin-right: 20px;
+  padding: 14px 15px;
+  background-color: $brend-color;
+}
+
+.advantages__item--water {
+  margin-right: 20px;
+  padding: 14px 14px;
+  background-color: $brend-color;
+}
+
+.advantages__item--food {
+  margin-right: 20px;
+  padding: 14px 15px;
+  background-color: $brend-color;
+}
+
+.advantages__item--result {
+  margin-right: 20px;
+  padding: 14px 15px;
+  background-color: $brend-color;
+}
+
+.advantages__item-background {
+  display: none;
+  // position: absolute;
+  // z-index: -1;
+  // font-family: "Oswald", sans-serif;
+  // font-size: 280px;
+  // line-height: 40px;
+  // font-weight: 400;
+  // color: $background-color-basic;
+}

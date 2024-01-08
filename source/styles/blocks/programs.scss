@@ -6,6 +6,81 @@
   list-style-type: none;
 }
 
+.programs__item {
+  background-color: $background-color-basic;
+}
+
+.programs__item-image {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 53px;
+
+  @media screen and (max-width: 767px) {
+    &--thin svg {
+      padding-top: 7px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 268px;
+    height: 211px;
+
+    &--fat svg {
+      width: 140px;
+      height: 194px;
+    }
+
+    &--thin svg {
+      width: 268px;
+      height: 112px;
+      padding-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 134px;
+    height: 106px;
+
+    &--fat svg {
+      width: 70px;
+      height: 97px;
+    }
+
+    &--thin svg {
+      width: 134px;
+      height: 56px;
+      padding-top: 20px;
+    }
+  }
+}
+
+.programs__item-image::after {
+  content: "";
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $brend-color;
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .programs__item-title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -20,6 +95,10 @@
 }
 
 .programs__item-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -27,4 +106,26 @@
   color: $standart-color-text;
   text-transform: uppercase;
   text-decoration: none;
+  width: 134px;
+}
+
+.programs__item-link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/icons/stack.svg#arrow");
+  background-position: -8px;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 10px;
+  right: 3%;
+  transition: 0.2s ease-in-out;
+}
+
+.programs__item-link:hover::after {
+  background-position: 0;
+}
+
+.programs__item-link:active {
+  opacity: 0.3;
 }

@@ -1,5 +1,61 @@
 .main-footer {
+  background-color: $background-color-basic;
+}
 
+.main-footer__social-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 132px;
+  margin: 20px 0;
+}
+
+.main-footer__social-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-footer__social-link {
+
+}
+
+.main-footer__social-link--vkontakte {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/icons/stack.svg#vkontakte");
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 22px;
+}
+
+.main-footer__social-link--youtube {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/icons/stack.svg#youtube");
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 22px;
+}
+
+.main-footer__social-link--telegram {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../../images/icons/stack.svg#telegram");
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 22px;
+}
+
+.main-footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main-footer__copyright-link {
@@ -8,4 +64,8 @@
   font-weight: 400;
   color: $base-color-text;
   text-decoration: none;
+}
+
+.main-footer__copyright-link--logo {
+
 }
