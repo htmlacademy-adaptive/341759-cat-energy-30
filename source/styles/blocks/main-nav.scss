@@ -3,11 +3,16 @@
 }
 
 .main-nav__list {
+  margin: 0;
+  padding: 0;
   text-align: center;
   list-style-type: none;
+  display: none; //временно на мобиле убирает меню
 }
 
 .main-nav__link {
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   line-height: 20px;
@@ -16,4 +21,37 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 436px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: contents;
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__wrapper {
+    width: 475px;
+  }
+
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

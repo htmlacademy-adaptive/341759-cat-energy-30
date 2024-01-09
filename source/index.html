@@ -25,7 +25,7 @@
         </picture>
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle" type="button">fff <!--временно-->
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
@@ -56,7 +56,6 @@
           <header class="hero__header">
             <h2 class="hero__title">Функциональное питание для котов</h2>
             <p class="hero__description">Занялся собой? Займись котом!</p>
-            <a class="button" href="/source/form.html">Подобрать программу</a>
           </header>
           <picture>
             <source type="image/png" media="(min-width: 1440px)" srcset="images/feed-desktop@1x.png 1x, images/feed-desktop@2x.png 2x" width="552" height="499">
@@ -64,6 +63,7 @@
             <img class="hero__image" src="images/feed-mobile@1x.png" srcset="images/feed-mobile@2x.png 2x" alt="Корм для кошек Cat Energy PRO с курицей" width="280" height="270">
           </picture>
         </div>
+        <a class="button" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <div class="programs__wrapper">
@@ -97,32 +97,40 @@
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <svg class="advantages__item--eco" width="24" height="28">
-                <use href="../../images/icons/stack.svg#eco"></use>
-              </svg>
+              <div class="advantages__item-icon advantages__item-icon--eco">
+                <svg width="26" height="28">
+                  <use href="../../images/icons/stack.svg#eco"></use>
+                </svg>
+              </div>
               <span class="advantages__item-background">1</span>
-              Функциональное питание содержит только полезные питательные вещества.
+              <span class="advantages__item-description">Функциональное питание содержит только полезные питательные вещества.</span>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--water" width="26" height="28">
-                <use href="../../images/icons/stack.svg#water"></use>
-              </svg>
+              <div class="advantages__item-icon advantages__item-icon--water">
+                <svg width="26" height="29">
+                  <use href="../../images/icons/stack.svg#water"></use>
+                </svg>
+              </div>
               <span class="advantages__item-background">2</span>
-              Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
+              <span class="advantages__item-description">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</span>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--food" width="24" height="28">
-                <use href="../../images/icons/stack.svg#food"></use>
-              </svg>
+              <div class="advantages__item-icon advantages__item-icon--food">
+                <svg width="25" height="30">
+                  <use href="../../images/icons/stack.svg#food"></use>
+                </svg>
+              </div>
               <span class="advantages__item-background">3</span>
-              Замените один-два приема обычной еды на&nbsp;наше функциональное питание.
+              <span class="advantages__item-description">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</span>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--result" width="26" height="28">
-                <use href="../../images/icons/stack.svg#result"></use>
-              </svg>
+              <div class="advantages__item-icon advantages__item-icon--result">
+                <svg width="27" height="31">
+                  <use href="../../images/icons/stack.svg#result"></use>
+                </svg>
+              </div>
               <span class="advantages__item-background">4</span>
-              Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!
+              <span class="advantages__item-description">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</span>
             </li>
           </ul>
         </div>

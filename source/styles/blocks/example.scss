@@ -1,5 +1,10 @@
 .example {
+  background-color: $background-color-block;
+}
 
+.example__wrapper {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .example__title {
@@ -32,4 +37,16 @@
   font-weight: 400;
   color: $standart-color-text;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    width: 1220px;
+  }
 }

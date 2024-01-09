@@ -2,22 +2,48 @@
 
 }
 
+.questionnaire__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .questionnaire__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: $standart-color-text;
+  margin: 0 auto;
+  padding: 20px 20px 0;
 }
 
 .questionnaire__description {
   font-family: "Oswald", sans-serif;
   color: $standart-color-text;
   text-transform: uppercase;
+
+  margin: 0 auto;
+  padding: 37px 20px 20px;
+}
+
+.questionnaire__field {
+  // border: none;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .questionnaire__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   list-style-type: none;
+  margin: 0;
+  padding: 20px;
+  border: none;
+}
+
+.questionnaire__label {
+  padding-right: 13px;
 }
 
 .questionnaire__label,
@@ -34,9 +60,35 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  padding: 0 20px;
 }
 
 .questionnaire__required {
   line-height: 16px;
   color: $standart-color-text;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__wrapper {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .questionnaire__title,
+  .questionnaire__description,
+  .questionnaire__list {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .questionnaire__heading {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
 }
