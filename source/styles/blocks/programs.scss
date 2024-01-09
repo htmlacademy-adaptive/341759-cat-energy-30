@@ -75,7 +75,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: $brend-color;
+  background-color: $brand-color;
 
   @media (min-width: 768px) {
     width: 200px;
@@ -93,12 +93,8 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
   text-transform: uppercase;
-}
-
-.programs__item-description {
-
 }
 
 @media (min-width: $tablet-width) {
@@ -116,10 +112,6 @@
     flex-direction: row;
     gap: 80px;
   }
-
-  .programs__item {
-
-  }
 }
 
 .programs__item-link {
@@ -131,7 +123,7 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
   text-transform: uppercase;
   text-decoration: none;
   width: 134px;

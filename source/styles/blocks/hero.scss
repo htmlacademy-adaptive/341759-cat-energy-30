@@ -1,5 +1,5 @@
 .hero {
-  background-color: $brend-color;
+  background-color: $brand-color;
 }
 
 .hero__wrapper {
@@ -40,7 +40,7 @@
   }
 
   .hero__title {
-    color: $standart-color-text;
+    color: $standard-color-text;
     font-size: 60px;
     line-height: 60px;
     text-align: left;
@@ -50,7 +50,7 @@
 
   .hero__description {
     padding-left: 90px;
-    color: $standart-color-text;
+    color: $standard-color-text;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
