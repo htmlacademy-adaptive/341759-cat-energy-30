@@ -4,14 +4,33 @@
   padding: 20px;
 }
 
+@media (min-width: $tablet-width) {
+  .advantages {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    width: 1220px;
+  }
+}
+
 .advantages__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: $standard-color-text;
   margin: 0 0 40px;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .advantages__list {
@@ -24,12 +43,44 @@
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .advantages__list {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 37px 135px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__list {
+    gap: 94px;
+  }
+}
+
 .advantages__item {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 0 0 0;
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 250px;
+    height: 280px;
+    gap: 56px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages__item {
+    width: 230px;
+  }
 }
 
 .advantages__item-icon {
@@ -60,43 +111,14 @@
   display: none;
 }
 
-.advantages__item-description {
-  width: 200px;
-}
-
 @media (min-width: $tablet-width) {
-  .advantages {
-    width: 708px;
-  }
-
-  .advantages__title {
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  .advantages__list {
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 37px 135px;
-  }
-
-  .advantages__item {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 250px;
-    height: 280px;
-    gap: 56px;
-  }
-
   .advantages__item-background {
     display: block;
     position: absolute;
     left: 37%;
     bottom: 37%;
     z-index: -1;
-    font-family: "Oswald", sans-serif;
+    font-family: $content-font;
     font-size: 280px;
     line-height: 40px;
     font-weight: 400;
@@ -104,16 +126,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .advantages {
-    width: 1220px;
-  }
-
-  .advantages__list {
-    gap: 94px;
-  }
-
-  .advantages__item {
-    width: 230px;
-  }
+.advantages__item-description {
+  width: 200px;
 }

@@ -1,15 +1,38 @@
 .more-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}
 
+@media (min-width: $tablet-width) {
+  .more-card {
+    justify-content: center;
+    width: 324px;
+    height: 430px;
+    border: 1px solid $border-color-second;
+  }
 }
 
 .more-card__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .more__card-title {
+    font-size: 120px;
+    line-height: 24px;
+    text-align: center;
+    width: 135px;
+    margin: 0 auto;
+    padding: 0 0 0;
+  }
 }
 
 .more-card__description {

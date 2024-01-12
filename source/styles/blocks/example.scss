@@ -7,6 +7,18 @@
   margin: 0 auto;
 }
 
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    width: 1220px;
+  }
+}
+
 .example__title {
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -31,7 +43,7 @@
 }
 
 .example__description-footer {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -39,14 +51,4 @@
   text-align: center;
 }
 
-@media (min-width: $tablet-width) {
-  .example__wrapper {
-    width: 708px;
-  }
-}
 
-@media (min-width: $desktop-width) {
-  .example__wrapper {
-    width: 1220px;
-  }
-}

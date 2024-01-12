@@ -1,5 +1,5 @@
 .button {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -9,4 +9,30 @@
   background-color: $brand-color;
   text-decoration: none;
   border: none;
+}
+
+.button__card {
+  grid-column: -1/1;
+  padding: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .button__card {
+    width: 250px;
+    margin: 0 auto;
+  }
+}
+
+.button__card-all {
+  width: 280px;
+  padding: 10px;
+  color: $base-color-text;
+  background-color: $background-color-basic;
+}
+
+@media (min-width: $tablet-width) {
+  .button__card-all {
+    width: 250px;
+    margin: 0 auto;
+  }
 }

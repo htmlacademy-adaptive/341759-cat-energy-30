@@ -3,8 +3,22 @@
   margin: 0 auto;
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__wrapper {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .questionnaire__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -14,18 +28,61 @@
 }
 
 .questionnaire__description {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   color: $standard-color-text;
   text-transform: uppercase;
-
   margin: 0 auto;
   padding: 37px 20px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__title,
+  .questionnaire__description {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__title,
+  .questionnaire__description {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.questionnaire__box {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__box {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__box {
+    flex-direction: row;
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .questionnaire__field {
   // border: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-data {
+    width: 570px;
+  }
 }
 
 .questionnaire__list {
@@ -38,13 +95,73 @@
   border: none;
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__box .questionnaire__list {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__box .questionnaire__list {
+    padding-left: 0;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact .questionnaire__list {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-contact .questionnaire__list {
+    padding-left: 110px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-comment .questionnaire__list {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-comment .questionnaire__list {
+    padding-left: 110px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-additionally .questionnaire__list {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-additionally .questionnaire__list {
+    padding-left: 110px;
+  }
+}
+
 .questionnaire__label {
   padding-right: 13px;
 }
 
+.questionnaire__field-comment .questionnaire__label {
+  padding-right: 0;
+}
+
+.questionnaire__field-comment textarea {
+  resize: none;
+  width: 280px;
+  min-height: 150px;
+  border-color: $border-color;
+}
+
 .questionnaire__label,
 .questionnaire__input {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -52,39 +169,45 @@
 }
 
 .questionnaire__heading {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   padding: 0 20px;
 }
 
-.questionnaire__required {
-  line-height: 16px;
-  color: $standard-color-text;
-}
-
 @media (min-width: $tablet-width) {
-  .questionnaire__wrapper {
-    width: 768px;
-    margin: 0 auto;
-  }
-
-  .questionnaire__title,
-  .questionnaire__description,
-  .questionnaire__list {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-
   .questionnaire__heading {
-    padding: 0 40px;
+    padding: 10px 70px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .questionnaire__wrapper {
-    width: 1440px;
-    margin: 0 auto;
+  .questionnaire__heading {
+    padding: 10px 110px;
   }
+}
+
+.questionnaire__required-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__required-action {
+    flex-direction: row;
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__required-action {
+    padding-left: 110px;
+  }
+}
+
+.questionnaire__required {
+  line-height: 16px;
+  color: $standard-color-text;
 }

@@ -4,11 +4,30 @@
   padding: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .programs {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs {
+    width: 1220px;
+  }
+}
+
 .programs__list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   padding: 0;
+}
+
+@media (min-width: $desktop-width) {
+  .programs__list {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .programs__item {
@@ -26,13 +45,7 @@
   width: 67px;
   height: 53px;
 
-  @media (max-width: 767px) {
-    &--thin svg {
-      padding-top: 7px;
-    }
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 268px;
     height: 211px;
 
@@ -48,7 +61,7 @@
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 134px;
     height: 106px;
 
@@ -77,19 +90,19 @@
   border-radius: 50%;
   background-color: $brand-color;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 200px;
     height: 200px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: $desktop-width) {
     width: 100px;
     height: 100px;
   }
 }
 
 .programs__item-title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -97,29 +110,12 @@
   text-transform: uppercase;
 }
 
-@media (min-width: $tablet-width) {
-  .programs {
-    width: 708px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .programs {
-    width: 1220px;
-  }
-
-  .programs__list {
-    flex-direction: row;
-    gap: 80px;
-  }
-}
-
 .programs__item-link {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
