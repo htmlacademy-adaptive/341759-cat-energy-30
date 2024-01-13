@@ -36,3 +36,22 @@
     margin: 0 auto;
   }
 }
+
+.button__additionally {
+  width: 280px;
+  padding: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .button__additionally {
+    width: 632px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button__additionally {
+    width: 244px;
+    margin: 0;
+  }
+}
