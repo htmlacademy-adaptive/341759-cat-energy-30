@@ -1,23 +1,71 @@
 .hero {
+  background-color: $brand-color;
+}
 
+@media (min-width: $tablet-width) {
+  .hero {
+    background-color: #ffffff;
+  }
 }
 
 .hero__wrapper {
-  background-color: $brend-color;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__wrapper {
+    width: 709px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__wrapper {
+    flex-direction: row;
+    width: 1060px;
+  }
 }
 
 .hero__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: $second-color-text;
   text-align: center;
+  padding: 27px 0 0;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__title {
+    color: $standard-color-text;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    width: 420px;
+    padding-left: 90px;
+  }
 }
 
 .hero__description {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   line-height: 14px;
   color: $second-color-text;
   text-align: center;
+  text-transform: uppercase;
+  padding: 25px 0 30px;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__description {
+    padding-left: 90px;
+    color: $standard-color-text;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

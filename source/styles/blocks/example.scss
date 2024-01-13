@@ -1,5 +1,22 @@
 .example {
+  background-color: $background-color-block;
+}
 
+.example__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    width: 1220px;
+  }
 }
 
 .example__title {
@@ -7,7 +24,7 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
 }
 
 .example__number {
@@ -15,7 +32,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
   text-transform: uppercase;
 }
 
@@ -26,10 +43,12 @@
 }
 
 .example__description-footer {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
   text-align: center;
 }
+
+

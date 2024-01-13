@@ -1,7 +1,10 @@
 .catalog-title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  color: $standart-color-text;
+  color: $standard-color-text;
+  width: 280px;
+  margin: 0 auto;
+
 }

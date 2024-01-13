@@ -1,19 +1,103 @@
 .more-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+}
 
+@media (min-width: $tablet-width) {
+  .more-card {
+    // justify-content: center;
+    // justify-content: flex-end;
+    padding-bottom: 46px;
+    width: 324px;
+    height: 384px;
+    border: 1px solid $border-color-second;
+  }
+}
+
+.more-card--pluse {
+  position: absolute;
+  top: 30px;
+  width: 248px;
+  height: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-card--pluse {
+    width: 265px;
+    height: 90px;
+  }
+}
+
+.more-card--pluse::before,
+.more-card--pluse::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #d3d3d3;
+}
+
+@media (min-width: $tablet-width) {
+  .more-card--pluse::before,
+  .more-card--pluse::after {
+    width: 60px;
+  }
+}
+
+.more-card--pluse::before {
+  transform: rotate(90deg);
+}
+
+.more-card--pluse::after {
+  transform: rotate(180deg);
 }
 
 .more-card__title {
-  font-family: "Oswald", sans-serif;
+  font-family: $content-font;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #111111;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 78px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-card__title {
+    width: 134px;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 auto;
+    padding-top: 150px;
+
+  }
 }
 
 .more-card__description {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 0;
+  padding: 8px 0 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .more-card__description {
+    font-size: 16px;
+    line-height: 18px;
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 95px;
+  }
 }

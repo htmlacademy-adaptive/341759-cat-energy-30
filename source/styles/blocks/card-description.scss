@@ -1,3 +1,31 @@
 .card-description {
+  width: 140px;
+  padding-top: 14px;
+}
 
+@media (min-width: $tablet-width) {
+  .card-description {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+}
+
+.card-description__item {
+  font-size: 12px;
+  line-height: 13px;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .card-description__item {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid $border-color-second;
+    padding: 5px 0;
+  }
+}
+
+.card-description__item:nth-child(even) {
+  text-align: right;
 }
