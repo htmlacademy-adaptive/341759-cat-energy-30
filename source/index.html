@@ -24,12 +24,12 @@
           <img src="images/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat energy">
         </picture>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">fff <!--временно-->
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__site-list">
             <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__link" href="#">
                 Главная
@@ -57,13 +57,13 @@
             <h2 class="hero__title">Функциональное питание для котов</h2>
             <p class="hero__description">Занялся собой? Займись котом!</p>
           </header>
-          <picture>
+          <picture class="hero__image">
             <source type="image/png" media="(min-width: 1440px)" srcset="images/feed-desktop@1x.png 1x, images/feed-desktop@2x.png 2x" width="552" height="499">
             <source type="image/jpeg" media="(min-width: 768px)" srcset="images/feed-tablet@1x.jpg 1x, images/feed-tablet@2x.jpg 2x" width="709" height="609">
-            <img class="hero__image" src="images/feed-mobile@1x.png" srcset="images/feed-mobile@2x.png 2x" alt="Корм для кошек Cat Energy PRO с курицей" width="280" height="270">
+            <img src="images/feed-mobile@1x.png" srcset="images/feed-mobile@2x.png 2x" alt="Корм для кошек Cat Energy PRO с курицей" width="280" height="270">
           </picture>
+          <a class="button button__hero hero__button" href="form.html">Подобрать программу</a>
         </div>
-        <a class="button" href="form.html">Подобрать программу</a>
       </section>
       <section class="programs">
         <div class="programs__wrapper">
@@ -97,7 +97,7 @@
           <h2 class="advantages__title">Как это работает</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <div class="advantages__item-icon advantages__item-icon--eco">
+              <div class="advantages__item-icon advantages__item-icon--background">
                 <svg width="26" height="28">
                   <use href="../../images/icons/stack.svg#eco"></use>
                 </svg>
@@ -106,7 +106,7 @@
               <span class="advantages__item-description">Функциональное питание содержит только полезные питательные вещества.</span>
             </li>
             <li class="advantages__item">
-              <div class="advantages__item-icon advantages__item-icon--water">
+              <div class="advantages__item-icon advantages__item-icon--background">
                 <svg width="26" height="29">
                   <use href="../../images/icons/stack.svg#water"></use>
                 </svg>
@@ -115,7 +115,7 @@
               <span class="advantages__item-description">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.</span>
             </li>
             <li class="advantages__item">
-              <div class="advantages__item-icon advantages__item-icon--food">
+              <div class="advantages__item-icon advantages__item-icon--background">
                 <svg width="25" height="30">
                   <use href="../../images/icons/stack.svg#food"></use>
                 </svg>
@@ -124,7 +124,7 @@
               <span class="advantages__item-description">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</span>
             </li>
             <li class="advantages__item">
-              <div class="advantages__item-icon advantages__item-icon--result">
+              <div class="advantages__item-icon advantages__item-icon--background">
                 <svg width="27" height="31">
                   <use href="../../images/icons/stack.svg#result"></use>
                 </svg>
@@ -145,7 +145,7 @@
                 5 кг
               </dt>
               <dd class="example__text">
-                Снижение веса
+                снижение веса
               </dd>
             </div>
             <div class="example__item">
@@ -153,7 +153,7 @@
                 60 дней
               </dt>
               <dd class="example__text">
-                Затрачено времени
+                затрачено времени
               </dd>
             </div>
           </dl>
@@ -220,5 +220,6 @@
         </div>
       </section>
     </main>
+  <script src="script.js"></script>
   </body>
 </html>
