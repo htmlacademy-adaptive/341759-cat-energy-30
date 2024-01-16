@@ -43,10 +43,9 @@
 
 @media (min-width: $desktop-width) {
   .hero {
-    background-color: rgba(104, 183, 56, 0.85);
+
     height: 694px;
-    top: -150px;
-    left: 53%;
+
     margin-bottom: -82px;
   }
 }
@@ -78,8 +77,6 @@
 @media (min-width: $desktop-width) {
   .hero__wrapper {
     position: relative;
-    left: -53%;
-    top: 150px;
     flex-direction: row;
     width: 1060px;
   }

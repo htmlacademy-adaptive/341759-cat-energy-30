@@ -6,12 +6,15 @@
   .example {
     background-color: $second-color-text;
     border-top: 1px solid #e6e6e6;
+    background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 43%, rgba(255,255,255,1) 43%);
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
     border-top: none;
+    background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 75%, rgba(255,255,255,1) 75%);
+
   }
 }
 
@@ -29,6 +32,9 @@
 
 @media (min-width: $desktop-width) {
   .example__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     width: 1220px;
   }
 }
@@ -53,7 +59,7 @@
 
 @media (min-width: $desktop-width) {
   .example__title {
-    padding-top: 0;
+    padding-top: 22px;
     padding-bottom: 76px;
   }
 }
@@ -80,6 +86,20 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .example__list-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__list-box {
+    flex-direction: column;
+  }
+}
+
 .example__list {
   display: flex;
   align-items: center;
@@ -94,6 +114,13 @@
     justify-content: flex-start;
     gap: 43px;
     padding-bottom: 99px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .example__list {
+    padding-bottom: 55px;
   }
 }
 
@@ -164,6 +191,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .example__text {
+    background-color: $background-color-basic;
+  }
+}
+
 .example__description-footer {
   font-family: $content-font;
   font-size: 14px;
@@ -178,13 +211,24 @@
 
 @media (min-width: $tablet-width) {
   .example__description-footer {
-    position: absolute;
-    top: 300px;
-    right: 0;
     width: 175px;
     font-size: 20px;
     line-height: 29px;
     text-align: right;
-    padding: 0;
+    padding: 11px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__description-footer {
+    width: 436px;
+    text-align: left;
+    padding: 0 0 75px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__description-footer span:last-child {
+    padding-left: 63px;
   }
 }
