@@ -1,7 +1,7 @@
 .more-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
   align-items: center;
   width: 320px;
   margin: 0 auto;
@@ -9,55 +9,32 @@
 
 @media (min-width: $tablet-width) {
   .more-card {
-    // justify-content: center;
-    // justify-content: flex-end;
-    padding-bottom: 46px;
+    grid-template-rows: 110px 98px 1fr 40px;
+    padding-bottom: 40px;
     width: 324px;
-    height: 384px;
-    border: 1px solid $border-color-second;
+    height: 440px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
   }
 }
 
-.more-card--pluse {
-  position: absolute;
-  top: 30px;
-  width: 248px;
-  height: 20px;
+@media (min-width: $desktop-width) {
+  .more-card {
+    width: 245px;
+    height: 436px;
+  }
+}
+
+.more-card_pluse {
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 25px 0 0;
 }
 
 @media (min-width: $tablet-width) {
-  .more-card--pluse {
-    width: 265px;
-    height: 90px;
+  .more-card_pluse {
+    padding-top: 50px;
   }
-}
-
-.more-card--pluse::before,
-.more-card--pluse::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 44%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 30px;
-  height: 2px;
-  background: #d3d3d3;
-}
-
-@media (min-width: $tablet-width) {
-  .more-card--pluse::before,
-  .more-card--pluse::after {
-    width: 60px;
-  }
-}
-
-.more-card--pluse::before {
-  transform: rotate(90deg);
-}
-
-.more-card--pluse::after {
-  transform: rotate(180deg);
 }
 
 .more-card__title {
@@ -70,7 +47,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  padding-top: 78px;
+  padding-top: 23px;
 }
 
 @media (min-width: $tablet-width) {
@@ -79,7 +56,8 @@
     font-size: 20px;
     line-height: 24px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 0;
+    align-self: end;
 
   }
 }
@@ -94,11 +72,11 @@
 
 @media (min-width: $tablet-width) {
   .more-card__description {
+    align-self: start;
     font-size: 16px;
     line-height: 18px;
     width: 170px;
     margin: 0 auto;
-    padding-top: 23px;
-    padding-bottom: 95px;
+    padding: 23px 0 0;
   }
 }
