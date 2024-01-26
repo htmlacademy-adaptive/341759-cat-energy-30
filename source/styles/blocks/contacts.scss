@@ -2,6 +2,10 @@
   margin: 0 auto;
 }
 
+.contacts__position--inner {
+  background-color: $background-color-basic;
+}
+
 @media (min-width: $desktop-width) {
   .contacts__position {
     position: relative;

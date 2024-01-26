@@ -41,12 +41,16 @@
 @media (min-width: $tablet-width) {
   .additionally__item {
     padding-bottom: 28px;
+    border-left: 1px solid $border-color-second;
+    border-right: 1px solid $border-color-second;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additionally__item {
     padding-bottom: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 

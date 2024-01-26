@@ -24,7 +24,25 @@
   font-weight: 400;
   color: $standard-color-text;
   margin: 0 auto;
-  padding: 20px 20px 0;
+  padding: 27px 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__title {
+    padding-top: 44px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
 
 .questionnaire__description {
@@ -32,20 +50,20 @@
   color: $standard-color-text;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 37px 20px 20px;
+  padding: 37px 20px 39px;
 }
 
 @media (min-width: $tablet-width) {
-  .questionnaire__title,
   .questionnaire__description {
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 54px 70px 66px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .questionnaire__title,
   .questionnaire__description {
+    padding-top: 55px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -56,107 +74,77 @@
   flex-direction: column;
   width: 320px;
   margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
   .questionnaire__box {
-    width: 768px;
+    width: 708px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .questionnaire__box {
     flex-direction: row;
-    width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
+    justify-content: space-between;
+    width: 1220px;
   }
 }
 
 .questionnaire__field {
-  // border: none;
+  border: none;
   padding: 0;
   margin: 0;
-}
-
-@media (min-width: $desktop-width) {
-  .questionnaire__field-data {
-    width: 570px;
-  }
 }
 
 .questionnaire__list {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  list-style-type: none;
   margin: 0;
   padding: 20px;
   border: none;
+  list-style-type: none;
 }
 
 @media (min-width: $tablet-width) {
-  .questionnaire__box .questionnaire__list {
-    padding-left: 70px;
+  .questionnaire__field-data .questionnaire__list {
+    gap: 20px;
+    width: 628px;
+    padding-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 72px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .questionnaire__box .questionnaire__list {
-    padding-left: 0;
+  .questionnaire__field-data .questionnaire__list {
+    width: 570px;
+    padding: 0;
   }
 }
 
-
-@media (min-width: $tablet-width) {
-  .questionnaire__field-contact .questionnaire__list {
-    padding-left: 70px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .questionnaire__field-contact .questionnaire__list {
-    padding-left: 110px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .questionnaire__field-comment .questionnaire__list {
-    padding-left: 70px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .questionnaire__field-comment .questionnaire__list {
-    padding-left: 110px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .questionnaire__field-additionally .questionnaire__list {
-    padding-left: 70px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .questionnaire__field-additionally .questionnaire__list {
-    padding-left: 110px;
-  }
-}
-
-.questionnaire__label {
-  padding-right: 13px;
-}
-
-.questionnaire__field-comment .questionnaire__label {
-  padding-right: 0;
-}
-
-.questionnaire__field-comment textarea {
-  resize: none;
+.questionnaire__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 280px;
-  min-height: 150px;
-  border-color: $border-color;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-data .questionnaire__item {
+    width: 628px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-data .questionnaire__item {
+    width: 570px;
+  }
 }
 
 .questionnaire__label,
@@ -168,46 +156,421 @@
   text-transform: uppercase;
 }
 
-.questionnaire__heading {
-  font-family: $content-font;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  padding: 0 20px;
+@media (min-width: $tablet-width) {
+  .questionnaire__label,
+  .questionnaire__input {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.questionnaire__field-data .questionnaire__label {
+  display: block;
+  padding-right: 13px;
+}
+
+.questionnaire__field-data .questionnaire__input {
+  flex-grow: 1;
+  min-width: 50px;
+  min-height: 45px;
+  margin: 0;
+  padding: 14px 15px 13px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
 }
 
 @media (min-width: $tablet-width) {
-  .questionnaire__heading {
-    padding: 10px 70px;
+  .questionnaire__field-data .questionnaire__input {
+    padding: 11px 20px;
+  }
+}
+
+// radio
+.questionnaire__field-control {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-control {
+    padding: 0 40px;
+    border: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .questionnaire__heading {
-    padding: 10px 110px;
+  .questionnaire__field-control {
+    width: 570px;
+    padding: 0;
+
   }
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__field-control .questionnaire__list {
+    padding: 23px 27px 27px;
+    border: 1px solid $border-color;
+  }
+}
+
+.questionnaire__field-control .questionnaire__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 45px;
+}
+
+.questionnaire__field-control .questionnaire__input {
+  margin: 0;
+}
+
+.questionnaire__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $second-color-text;
+  border: 1px solid $border-color-second;
+  border-radius: 50%;
+}
+
+.questionnaire__control-label {
+  padding: 6px 0;
+  margin: 0;
+}
+
+.questionnaire__field-control .questionnaire__input[type="radio"]:checked + .questionnaire__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background-color: $brand-color;
+  border-radius: 50%;
+}
+
+//contact
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact {
+    width: 628px;
+    margin: 0 auto;
+  }
+}
+
+.questionnaire__field-contact .questionnaire__list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact .questionnaire__list {
+    gap: 20px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-contact .questionnaire__list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1220px;
+  }
+}
+
+.questionnaire__field-contact .questionnaire__item {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact .questionnaire__item {
+    width: 628px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-contact .questionnaire__item {
+    width: 570px;
+  }
+}
+
+.questionnaire__field-contact .questionnaire__label {
+  display: block;
+  padding-right: 13px;
+}
+
+.questionnaire__field-contact .questionnaire__input {
+  flex-grow: 1;
+  min-width: 50px;
+  min-height: 45px;
+  margin: 0;
+  padding: 14px 32px 13px 15px;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact .questionnaire__input {
+    padding: 11px 34px 11px 20px;
+  }
+}
+
+.questionnaire__icon-email {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 13px;
+  background-color: $standard-color-text;
+  mask-image: url("../../images/icons/stack.svg#icon-email");
+  mask-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.questionnaire__icon-phone {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 13px;
+  background-color: $standard-color-text;
+  mask-image: url("../../images/icons/stack.svg#icon-phone");
+  mask-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+//comment
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-comment {
+    width: 708px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-comment  {
+    width: 1220px;
+  }
+}
+
+.questionnaire__field-comment .questionnaire__list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-comment .questionnaire__list {
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-comment .questionnaire__item {
+    width: 628px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-comment .questionnaire__item {
+    width: 1220px;
+  }
+}
+
+.questionnaire__field-comment textarea {
+  font-family: $content-font;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $standard-color-text;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 14px;
+  resize: none;
+  width: 280px;
+  min-height: 150px;
+  border-color: $border-color;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-comment textarea {
+    width: 628px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-comment textarea {
+    width: 1220px;
+  }
+}
+
+// additionally
+@media (min-width: $tablet-width) {
+  .questionnaire__field-additionally {
+    width: 628px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-additionally {
+    width: 1220px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-additionally .questionnaire__item {
+    width: 245px;
+  }
+}
+
+.questionnaire__field-additionally .questionnaire__label {
+  position: relative;
+  padding-left: 45px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-additionally .questionnaire__label {
+    padding-left: 60px;
+  }
+}
+
+.questionnaire__field-additionally .questionnaire__list {
+  gap: 13px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-additionally .questionnaire__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 64px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-additionally .questionnaire__list {
+    gap: 32px 80px;
+  }
+}
+
+.questionnaire__control-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $second-color-text;
+  border: 1px solid $border-color-second;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__control-checkbox {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+.questionnaire__input[type="checkbox"]:checked + .questionnaire__control-checkbox {
+  background-image: url(../../images/icons/checkbox.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__input[type="checkbox"]:checked + .questionnaire__control-checkbox {
+    background-size: 24px 18px;
+  }
+}
+
+.questionnaire__checkbox-label {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__checkbox-label {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+//button
 .questionnaire__required-action {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 34px 20px 32px;
 }
 
 @media (min-width: $tablet-width) {
   .questionnaire__required-action {
+    width: 628px;
     flex-direction: row;
+    padding-top: 52px;
     padding-left: 70px;
+    padding-bottom: 60px;
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: $desktop-width) {
   .questionnaire__required-action {
-    padding-left: 110px;
+    width: 1220px;
+    margin: 0 auto;
+    padding: 60px 0 79px;
+  }
+}
+
+.questionnaire__button {
+  padding: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__button {
+    width: 284px;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__button {
+    width: 570px;
+    margin-right: 80px;
   }
 }
 
 .questionnaire__required {
-  line-height: 16px;
-  color: $standard-color-text;
+  padding: 21px 10px 0;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__required {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding-left: 0;
+  }
 }
