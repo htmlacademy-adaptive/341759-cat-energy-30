@@ -64,15 +64,15 @@
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-name">Имя:*</label>
-                    <input class="questionnaire__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
+                    <input class="questionnaire__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
                   </li>
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-weight">Вес (кг):*</label>
-                    <input class="questionnaire__input" id="cat-weight" name="cat-weight" type="text" placeholder="7">
+                    <input class="questionnaire__input" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
                   </li>
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-age">Возраст (лет):</label>
-                    <input class="questionnaire__input" id="cat-age" name="cat-age" type="text" placeholder="7">
+                    <input class="questionnaire__input" id="cat-age" name="cat-age" type="number" placeholder="7">
                   </li>
                 </ul>
               </fieldset>
@@ -120,12 +120,12 @@
                 <li class="questionnaire__item">
                   <label class="questionnaire__label" for="email">E-mail:*</label>
                   <span class="questionnaire__icon-email"></span>
-                  <input class="questionnaire__input" id="email" name="email" type="text" placeholder="kuklachev@gmail.com">
+                  <input class="questionnaire__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
                 </li>
                 <li class="questionnaire__item">
                   <label class="questionnaire__label" for="phone">Телефон:*</label>
                   <span class="questionnaire__icon-phone"></span>
-                  <input class="questionnaire__input questionnaire__input--phone" id="phone" name="phone" type="text" placeholder="8 (960) 900-60-90">
+                  <input class="questionnaire__input questionnaire__input--phone" id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>
