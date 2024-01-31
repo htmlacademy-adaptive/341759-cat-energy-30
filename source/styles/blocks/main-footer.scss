@@ -23,6 +23,7 @@
 @media (min-width: $desktop-width) {
   .main-footer__wrapper {
     width: 1220px;
+    padding: 54px 0;
   }
 }
 
@@ -33,7 +34,7 @@
   left: 0;
   width: 280px;
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: $background-color-line;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,10 +47,10 @@
   content: "";
   position: absolute;
   bottom: 94px;
-  left: 0px;
+  left: 0;
   width: 280px;
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: $background-color-line;
 }
 
 @media (min-width: $tablet-width) {
@@ -59,7 +60,7 @@
 }
 
 .main-footer__logo-text {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .main-footer__logo-text:hover {
@@ -77,8 +78,7 @@
 }
 
 .main-footer__social {
-
-  width: 132px;
+  max-width: 132px;
   margin: 0 auto;
   padding: 20px 0;
 }
@@ -86,7 +86,9 @@
 .main-footer__social-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 132px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -162,7 +164,7 @@
 
 @media (min-width: $tablet-width) {
   .main-footer__copyright-link {
-    width: 168px;
+    width: 162px;
     padding-top: 0;
   }
 }

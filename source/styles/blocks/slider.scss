@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   width: 280px;
-  padding-bottom: 40px;
+  padding-bottom: 36px;
   margin: 0 auto;
 }
 
@@ -17,6 +17,8 @@
 @media (min-width: $desktop-width) {
   .slider {
     margin: 0;
+    padding-top: 21px;
+    padding-bottom: 20px;
   }
 }
 
@@ -57,7 +59,7 @@
   width: 57px;
   height: 256px;
   transition: 0.2s ease-in-out;
-  color: #666666;
+  color: $icon_color;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -78,7 +80,7 @@
   width: 4px;
   height: 100%;
   border-radius: 2px;
-  background-color: #666666;
+  background-color: $icon_color;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -90,7 +92,7 @@
 }
 
 .slider__button:active::before {
-  background-color: #9ECC82;
+  background-color: $slider-button-active;
 }
 
 .slider__button:hover svg {
@@ -98,5 +100,5 @@
 }
 
 .slider__button:active svg {
-  color: #9ECC82;
+  color: $slider-button-active;
 }

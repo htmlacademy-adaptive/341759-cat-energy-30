@@ -108,14 +108,14 @@
 @media (max-width: 767px) {
   .main-nav--opened .main-nav__list {
     position: absolute;
-    background-color: #ffffff;
+    background-color: $second-color-text;
     width: 320px;
   }
 }
 
 .main-nav__site-list {
   display: block;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $border-color-bottom;
 }
 
 @media (min-width: $tablet-width) {
@@ -137,7 +137,7 @@
 }
 
 .main-nav__site-list li {
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid $border-color-bottom;
 }
 
 @media (min-width: $tablet-width) {
@@ -182,18 +182,6 @@
   }
 }
 
-// @media (min-width: $tablet-width) {
-//   .main-nav__link:hover:not(.main-nav__link--current) {
-//     opacity: 0.8;
-//   }
-// }
-
-// @media (min-width: $tablet-width) {
-//   .main-nav__link:active:not(.main-nav__link--current) {
-//     opacity: 0.6;
-//   }
-// }
-
 @media (min-width: $desktop-width) {
   .main-header--index .main-nav__link {
     font-size: 20px;
@@ -218,84 +206,3 @@
     background: $second-color-text;
   }
 }
-
-
-
-
-
-
-
-// .main-nav--nojs .main-nav__toggle {
-//   display: none;
-// }
-
-// .main-nav--nojs .main-nav__wrapper {
-//   margin-bottom: 253px;
-// }
-
-// .main-nav__wrapper {
-//   position: relative;
-// }
-
-// @media (min-width: $tablet-width) {
-//   .main-nav--nojs .main-nav__wrapper {
-//     margin-bottom: 0;
-//   }
-// }
-
-
-
-// @media (min-width: $desktop-width) {
-//   .main-nav__wrapper {
-//     width: 475px;
-//   }
-// }
-
-// @media (min-width: $tablet-width) {
-//   .main-nav__toggle {
-//     display: none;
-//   }
-// }
-
-
-
-
-
-// @media (min-width: $tablet-width) {
-//   .main-nav__list {
-//     display: contents;
-//   }
-// }
-
-// .main-nav__item {
-//   padding-top: 22px;
-//   padding-bottom: 24px;
-// }
-
-// .main-nav__link {
-//   margin: 0;
-//   padding: 0 20px;
-//   font-family: $content-font;
-//   font-size: 20px;
-//   line-height: 20px;
-//   font-weight: 400;
-//   color: $base-color-text;
-//   text-align: center;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   min-width: 200px;
-// }
-
-// @media (min-width: $tablet-width) {
-//   .main-nav__link {
-//     font-size: 18px;
-//     line-height: 24px;
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   .main-nav__link {
-//     font-size: 20px;
-//     line-height: 20px;
-//   }
-// }

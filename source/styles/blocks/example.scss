@@ -4,17 +4,15 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    background-color: $second-color-text;
-    border-top: 1px solid #e6e6e6;
-    background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 43%, rgba(255,255,255,1) 43%);
+    border-top: 1px solid $border-color-bottom;
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 43%, rgba(255, 255, 255, 1) 43%);
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
     border-top: none;
-    background: linear-gradient(0deg, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 75%, rgba(255,255,255,1) 75%);
-
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 75%, rgba(255, 255, 255, 1) 75%);
   }
 }
 
@@ -112,7 +110,7 @@
 @media (min-width: $tablet-width) {
   .example__list {
     justify-content: flex-start;
-    gap: 43px;
+    gap: 38px;
     padding-bottom: 99px;
   }
 }
@@ -215,7 +213,7 @@
     font-size: 20px;
     line-height: 29px;
     text-align: right;
-    padding: 11px 0 0;
+    padding: 7px 0 0;
   }
 }
 
@@ -223,7 +221,7 @@
   .example__description-footer {
     width: 436px;
     text-align: left;
-    padding: 0 0 75px;
+    padding: 0 0 69px;
   }
 }
 

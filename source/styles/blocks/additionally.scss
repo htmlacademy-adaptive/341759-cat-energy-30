@@ -34,13 +34,13 @@
 }
 
 .additionally__item {
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid $border-color-second;
 }
 
 @media (min-width: $tablet-width) {
   .additionally__item {
-    padding-bottom: 28px;
+    padding-bottom: 27px;
     border-left: 1px solid $border-color-second;
     border-right: 1px solid $border-color-second;
   }
@@ -149,8 +149,23 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .additionally__item-price {
+.additionally__button {
+  display: block;
+  width: 280px;
+  padding: 10px;
+  box-sizing: border-box;
+}
 
+@media (min-width: $tablet-width) {
+  .additionally__button {
+    width: 632px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additionally__button {
+    width: 244px;
+    margin: 0;
   }
 }

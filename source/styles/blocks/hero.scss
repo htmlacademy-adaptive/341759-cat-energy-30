@@ -2,9 +2,8 @@
   position: relative;
   background-color: rgba(104, 183, 56, 0.85);
   background-blend-mode: overlay;
-  height: 306px;
+  height: 301px;
   margin-bottom: 198px;
-
 }
 
 .hero::after {
@@ -16,27 +15,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 320px;
-  height: 305px;
+  height: 301px;
   z-index: -2;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  background-image: linear-gradient(48deg, #4D4F53 0%, #3F3F41 100%);;
+  background-image: linear-gradient(48deg, $linear-gradient-background-of 0%, $linear-gradient-background-to 100%);
   background-size: cover;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 305px;
+  height: 301px;
   z-index: -3;
 }
 
 @media (min-width: $tablet-width) {
   .hero {
-    background-color: #ffffff;
-    height: 835px;
+    background-color: $second-color-text;
+    min-height: 835px;
     margin-bottom: 0;
   }
 }
@@ -44,8 +43,7 @@
 @media (min-width: $desktop-width) {
   .hero {
     position: static;
-    height: 694px;
-    margin-bottom: -82px;
+    min-height: 624px;
   }
 }
 
@@ -66,7 +64,14 @@
   .hero__wrapper {
     position: relative;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 1060px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__header {
+    position: relative;
   }
 }
 
@@ -88,14 +93,14 @@
     line-height: 60px;
     text-align: left;
     width: 420px;
-    padding-top: 25px;
+    padding-top: 36px;
     padding-left: 90px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .hero__title {
-    padding-top: 80px;
+    padding-top: 76px;
     padding-left: 0;
   }
 }
@@ -138,7 +143,15 @@
 @media (min-width: $desktop-width) {
   .hero__image {
     left: -52px;
+    top: -4px;
   }
+}
+
+.hero__button {
+  line-height: 18px;
+  width: 260px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -147,7 +160,7 @@
     font-size: 20px;
     line-height: 26px;
     width: 224px;
-    top: 255px;
+    top: 266px;
     margin-left: 90px;
     margin-bottom: 0;
     z-index: 3;
@@ -158,7 +171,7 @@
 
 @media (min-width: $desktop-width) {
   .hero__button {
-    top: 310px;
+    top: 308px;
     margin-left: 0;
   }
 }

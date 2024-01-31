@@ -25,7 +25,6 @@
   background-color: $brand-color;
   background-image: url("../../images/catalog-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-
 }
 
 @media (min-width: $tablet-width) {
@@ -49,7 +48,7 @@
   position: absolute;
   display: block;
   background-image: url("../../images/icons/stack.svg#icon-gift");
-  top: 35%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
@@ -59,14 +58,14 @@
 
 @media (min-width: $tablet-width) {
   .action__wrapper::before {
-    top: 50%;
-    left: 15%;
+    top: 49%;
+    left: 17%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .action__wrapper::before {
-    top: 35%;
+    top: 34%;
     left: 50%;
   }
 }
@@ -93,6 +92,6 @@
   .action__description {
     text-align: center;
     margin: 0 auto;
-    padding-top:185px;
+    padding-top: 185px;
   }
 }

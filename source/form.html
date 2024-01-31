@@ -64,6 +64,7 @@
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-name">Имя:*</label>
+                    <!-- класс для ошибки questionnaire__input-error-->
                     <input class="questionnaire__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
                   </li>
                   <li class="questionnaire__item">
@@ -103,17 +104,13 @@
                 </ul>
               </fieldset>
             </div>
-            <section class="section-title">
-              <div class="section-title__container">
-                <div class="section-title__wrapper">
-                  <h2 class="section-title__text">
-                    <span>
-                      Контактные данные <br>(владельца кота)
-                    </span>
-                  </h2>
-                </div>
-              </div>
-            </section>
+            <div class="section-title__wrapper-contact">
+              <h2 class="section-title__text section-title__text-contact">
+                <span>
+                  Контактные данные <br>(владельца кота)
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-contact">
               <legend class="visually-hidden">Ваши контактные данные</legend>
               <ul class="questionnaire__list">
@@ -129,17 +126,13 @@
                 </li>
               </ul>
             </fieldset>
-            <section class="section-title">
-              <div class="section-title__container">
-                <div class="section-title__wrapper">
-                  <h2 class="section-title__text">
-                    <span>
-                      Комментарий
-                    </span>
-                  </h2>
-                </div>
-              </div>
-            </section>
+            <div class="section-title__wrapper-contact">
+              <h2 class="section-title__text">
+                <span>
+                  Комментарий
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-comment">
               <legend class="visually-hidden">Комментарий</legend>
               <ul class="questionnaire__list">
@@ -151,17 +144,13 @@
                 </li>
               </ul>
             </fieldset>
-            <section class="section-title">
-              <div class="section-title__container">
-                <div class="section-title__wrapper">
-                  <h2 class="section-title__text">
-                    <span>
-                      Дополнительно
-                    </span>
-                  </h2>
-                </div>
-              </div>
-            </section>
+            <div class="section-title__wrapper-additionally">
+              <h2 class="section-title__text">
+                <span>
+                  Дополнительно
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-additionally">
               <legend class="visually-hidden">Дополнительно</legend>
               <ul class="questionnaire__list">
@@ -226,24 +215,24 @@
           <div class="main-footer__social">
             <ul class="main-footer__social-list">
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--vkontakte" href="#">
+                <a class="main-footer__social-link main-footer__social-link--vkontakte" href="#" target="_blank">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--youtube" href="#">
+                <a class="main-footer__social-link main-footer__social-link--youtube" href="#" target="_blank">
                   <span class="visually-hidden">Ютуб</span>
                 </a>
               </li>
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--telegram" href="#">
+                <a class="main-footer__social-link main-footer__social-link--telegram" href="#" target="_blank">
                   <span class="visually-hidden">Телеграм</span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="main-footer__copyright">
-            <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               HTML Academy
               <svg class="main-footer__copyright-link--logo" width="27" height="34">
                 <use href="../../images/icons/stack.svg#html-academy"></use>

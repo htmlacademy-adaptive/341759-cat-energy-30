@@ -10,14 +10,12 @@
     left: 50%;
     width: 50%;
     height: 694px;
-    background-color: #62A53A;
+    background-color: $background-color-index;
     background-image: url("../../images/index-background-desktop-cat@1x.jpg");
     background-repeat: no-repeat;
     background-position: left;
-
   }
 }
-
 
 .main-header__wrapper {
   position: relative;
@@ -32,8 +30,10 @@
 
 @media (min-width: $tablet-width) {
   .main-header__wrapper {
+    justify-content: unset;
     flex-direction: row;
     align-items: center;
+    gap: 93px;
     max-width: 708px;
     padding: 25px 0;
     margin: 0 auto;

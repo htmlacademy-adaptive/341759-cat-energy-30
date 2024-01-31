@@ -6,7 +6,7 @@
   color: $standard-color-text;
   width: 300px;
   margin: 0 auto;
-  border-bottom: 1px solid #EBEBEB;
+  border-bottom: 1px solid $background-color-button;
   padding: 27px 0 41px 20px;
 }
 
@@ -15,7 +15,7 @@
     font-size: 60px;
     line-height: 60px;
     width: 708px;
-    padding: 40px 0 94px;
+    padding: 35px 0 94px;
     border: none;
   }
 }
@@ -23,6 +23,6 @@
 @media (min-width: $desktop-width) {
   .catalog-title {
     width: 1220px;
-    padding-top: 44px;
+    padding-top: 41px;
   }
 }

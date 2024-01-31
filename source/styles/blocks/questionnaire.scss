@@ -35,7 +35,7 @@
   .questionnaire__title {
     font-size: 60px;
     line-height: 60px;
-    padding-top: 40px;
+    padding-top: 37px;
     padding-left: 70px;
     padding-right: 70px;
   }
@@ -43,7 +43,7 @@
 
 @media (min-width: $desktop-width) {
   .questionnaire__title {
-    padding-top: 44px;
+    padding-top: 40px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -54,7 +54,7 @@
   color: $standard-color-text;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 37px 20px 39px;
+  padding: 37px 20px 16px;
 }
 
 @media (min-width: $tablet-width) {
@@ -192,7 +192,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (min-width: $tablet-width) {
   .questionnaire__field-data .questionnaire__input {
-    padding: 11px 20px;
+    padding: 14px 20px;
   }
 }
 
@@ -206,23 +206,20 @@ input[type="number"]::-webkit-outer-spin-button {
 .questionnaire__field-data .questionnaire__input:focus,
 .questionnaire__field-contact .questionnaire__input:focus,
 .questionnaire__field-comment textarea:focus {
-  border: 2px solid $base-color-text;
+  border: 1px solid $base-color-text;
   appearance: none;
   outline: none;
 }
 
-.questionnaire__field-data .questionnaire__input:invalid,
-.questionnaire__field-contact .questionnaire__input:invalid {
-  border: 2px solid #FF8282;
-  outline: none;
+.questionnaire__field-data .questionnaire__input-error,
+.questionnaire__field-contact .questionnaire__input-error {
+  border: 1px solid $color-error;
 }
-
-
 
 // radio
 .questionnaire__field-control {
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
+  border-top: 1px solid $background-color-line;
+  border-bottom: 1px solid $background-color-line;
 }
 
 @media (min-width: $tablet-width) {
@@ -236,7 +233,6 @@ input[type="number"]::-webkit-outer-spin-button {
   .questionnaire__field-control {
     width: 570px;
     padding: 0;
-
   }
 }
 
@@ -247,12 +243,24 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__field-control .questionnaire__item {
+    width: 300px;
+  }
+}
+
 .questionnaire__field-control .questionnaire__label {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: start;
   padding-left: 45px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-control .questionnaire__label {
+    padding-left: 60px;
+  }
 }
 
 .questionnaire__field-control .questionnaire__input {
@@ -270,9 +278,16 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 50%;
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__control-mark {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .questionnaire__field-control .questionnaire__label:hover .questionnaire__control-mark,
 .questionnaire__field-additionally .questionnaire__label:hover .questionnaire__control-checkbox {
-  border: 1px solid #bababa;
+  border: 1px solid $border-color-checkbox;
 }
 
 .questionnaire__input:disabled + .questionnaire__control-mark,
@@ -291,6 +306,12 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__control-label {
+    padding: 8px 0 9px;
+  }
+}
+
 .questionnaire__field-control .questionnaire__input[type="radio"]:checked + .questionnaire__control-mark::before {
   content: "";
   position: absolute;
@@ -301,6 +322,13 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 13px;
   background-color: $brand-color;
   border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__field-control .questionnaire__input[type="radio"]:checked + .questionnaire__control-mark::before {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 //contact
@@ -364,7 +392,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (min-width: $tablet-width) {
   .questionnaire__field-contact .questionnaire__input {
-    padding: 11px 34px 11px 20px;
+    padding: 17px 34px 11px 20px;
   }
 }
 
@@ -403,12 +431,14 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 708px;
     margin: 0 auto;
     padding: 0;
+    padding-top: 11px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .questionnaire__field-comment  {
+  .questionnaire__field-comment {
     width: 1220px;
+    padding-top: 5px;
   }
 }
 
@@ -448,7 +478,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 14px;
   resize: none;
   width: 280px;
-  min-height: 150px;
+  min-height: 120px;
   border-color: $border-color;
 }
 
@@ -457,7 +487,8 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 628px;
     font-size: 20px;
     line-height: 30px;
-    padding: 11px 20px;
+    padding: 14px 20px;
+    min-height: 178px;
     box-sizing: border-box;
   }
 }
@@ -465,6 +496,7 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (min-width: $desktop-width) {
   .questionnaire__field-comment textarea {
     width: 1220px;
+    padding-top: 10px;
   }
 }
 
@@ -538,7 +570,6 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
-
 .questionnaire__input[type="checkbox"]:checked + .questionnaire__control-checkbox {
   background-image: url(../../images/icons/checkbox.svg);
   background-repeat: no-repeat;
@@ -571,7 +602,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .questionnaire__required-action {
   display: flex;
   flex-direction: column;
-  padding: 34px 20px 32px;
+  padding: 30px 20px 32px;
 }
 
 @media (min-width: $tablet-width) {
@@ -625,6 +656,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 16px;
     line-height: 16px;
     margin: 0;
+    padding-top: 17px;
     padding-left: 0;
   }
 }
