@@ -4,7 +4,25 @@
   line-height: 36px;
   font-weight: 400;
   color: $standard-color-text;
-  width: 280px;
+  width: 300px;
   margin: 0 auto;
+  border-bottom: 1px solid $background-color-button;
+  padding: 27px 0 41px 20px;
+}
 
+@media (min-width: $tablet-width) {
+  .catalog-title {
+    font-size: 60px;
+    line-height: 60px;
+    width: 708px;
+    padding: 35px 0 94px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-title {
+    width: 1220px;
+    padding-top: 41px;
+  }
 }

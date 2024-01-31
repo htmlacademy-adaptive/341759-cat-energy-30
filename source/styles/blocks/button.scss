@@ -11,47 +11,10 @@
   border: none;
 }
 
-.button__card {
-  grid-column: -1/1;
-  padding: 10px;
+.button:hover {
+  background-color: $background-color-button-hover;
 }
 
-@media (min-width: $tablet-width) {
-  .button__card {
-    width: 250px;
-    margin: 0 auto;
-  }
-}
-
-.button__card-all {
-  width: 280px;
-  padding: 10px;
-  color: $base-color-text;
-  background-color: $background-color-basic;
-}
-
-@media (min-width: $tablet-width) {
-  .button__card-all {
-    width: 250px;
-    margin: 0 auto;
-  }
-}
-
-.button__additionally {
-  width: 280px;
-  padding: 10px;
-}
-
-@media (min-width: $tablet-width) {
-  .button__additionally {
-    width: 632px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .button__additionally {
-    width: 244px;
-    margin: 0;
-  }
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
 }

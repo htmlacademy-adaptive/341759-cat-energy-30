@@ -1,13 +1,10 @@
-.main-container {
-
-}
-
 @media (min-width: $desktop-width) {
   .main-container__additionally {
     width: 1220px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    padding-bottom: 87px;
   }
 }

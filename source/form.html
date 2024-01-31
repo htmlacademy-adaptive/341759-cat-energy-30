@@ -13,41 +13,43 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo" href="#">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
-          <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
-        </picture>
-        <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
-          <img src="images/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat energy">
-        </picture>
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html">
-                Главная
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">
-                Каталог продукции
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link" href="#">
-                Подбор программы
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+            <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип Cat Energy.">
+          </picture>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg" width="118" height="21" type="image/svg+xml">
+            <img src="images/logo-text.svg" width="101" height="18" alt="Текстовый логотип Cat energy">
+          </picture>
+        </a>
+        <nav class="main-nav ">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list main-nav__site-list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">
+                  Каталог продукции
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--current" href="">
+                  Подбор программы
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Форма подбора программы для кота</h1>
@@ -62,55 +64,75 @@
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-name">Имя:*</label>
-                    <input class="questionnaire__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик">
+                    <!-- класс для ошибки questionnaire__input-error-->
+                    <input class="questionnaire__input" id="cat-name" name="cat-name" type="text" placeholder="Барсик" required>
                   </li>
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-weight">Вес (кг):*</label>
-                    <input class="questionnaire__input" id="cat-weight" name="cat-weight" type="text" placeholder="7">
+                    <input class="questionnaire__input" id="cat-weight" name="cat-weight" type="number" placeholder="7" required>
                   </li>
                   <li class="questionnaire__item">
                     <label class="questionnaire__label" for="cat-age">Возраст (лет):</label>
-                    <input class="questionnaire__input" id="cat-age" name="cat-age" type="text" placeholder="7">
+                    <input class="questionnaire__input" id="cat-age" name="cat-age" type="number" placeholder="7">
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="questionnaire__field">
+              <fieldset class="questionnaire__field questionnaire__field-control">
                 <legend class="visually-hidden">Программа</legend>
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
-                    <input class="questionnaire__input" id="program-slim" name="type-of-program" value="weight loss" type="radio" checked>
-                    <span class="questionnaire__control-mark"></span>
-                    <label class="questionnaire__label" for="program-slim">Похудение</label>
+                    <label class="questionnaire__label" for="program-slim">
+                      <input class="questionnaire__input visually-hidden" id="program-slim" name="type-of-program" value="weight loss" type="radio" checked>
+                      <span class="questionnaire__control-mark"></span>
+                      <span class="questionnaire__control-label">Похудение</span>
+                    </label>
                   </li>
                   <li class="questionnaire__item">
-                    <input class="questionnaire__input" id="program-pro" name="type-of-program" value="Mass gain" type="radio">
-                    <span class="questionnaire__control-mark"></span>
-                    <label class="questionnaire__label" for="program-pro">Набор массы</label>
+                    <label class="questionnaire__label" for="program-pro">
+                      <input class="questionnaire__input visually-hidden" id="program-pro" name="type-of-program" value="Mass gain" type="radio">
+                      <span class="questionnaire__control-mark"></span>
+                      <span class="questionnaire__control-label">Набор массы</span>
+                    </label>
                   </li>
                   <li class="questionnaire__item">
-                    <input class="questionnaire__input" id="program-nothing" name="type-of-program" value="don't know" type="radio">
-                    <span class="questionnaire__control-mark"></span>
-                    <label class="questionnaire__label" for="program-nothing">Не знаю (Нужен ваш совет)</label>
+                    <label class="questionnaire__label" for="program-nothing">
+                      <input class="questionnaire__input visually-hidden" id="program-nothing" name="type-of-program" value="don't know" type="radio">
+                      <span class="questionnaire__control-mark"></span>
+                      <span class="questionnaire__control-label">Не знаю (Нужен ваш совет)</span>
+                    </label>
                   </li>
                 </ul>
               </fieldset>
             </div>
-
-            <h3 class="questionnaire__heading">Контактные данные <br>(владельца кота)</h3>
+            <div class="section-title__wrapper-contact">
+              <h2 class="section-title__text section-title__text-contact">
+                <span>
+                  Контактные данные <br>(владельца кота)
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-contact">
               <legend class="visually-hidden">Ваши контактные данные</legend>
               <ul class="questionnaire__list">
                 <li class="questionnaire__item">
                   <label class="questionnaire__label" for="email">E-mail:*</label>
-                  <input class="questionnaire__input" id="email" name="email" type="text" placeholder="kuklachev@gmail.com">
+                  <span class="questionnaire__icon-email"></span>
+                  <input class="questionnaire__input" id="email" name="email" type="email" placeholder="kuklachev@gmail.com" required>
                 </li>
                 <li class="questionnaire__item">
                   <label class="questionnaire__label" for="phone">Телефон:*</label>
-                  <input class="questionnaire__input" id="phone" name="phone" type="text" placeholder="8 (960) 900-60-90">
+                  <span class="questionnaire__icon-phone"></span>
+                  <input class="questionnaire__input questionnaire__input--phone" id="phone" name="phone" type="tel" placeholder="8 (960) 900-60-90" required>
                 </li>
               </ul>
             </fieldset>
-            <h3 class="questionnaire__heading">Комментарий</h3>
+            <div class="section-title__wrapper-contact">
+              <h2 class="section-title__text">
+                <span>
+                  Комментарий
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-comment">
               <legend class="visually-hidden">Комментарий</legend>
               <ul class="questionnaire__list">
@@ -122,34 +144,48 @@
                 </li>
               </ul>
             </fieldset>
-            <h3 class="questionnaire__heading">Дополнительно</h3>
+            <div class="section-title__wrapper-additionally">
+              <h2 class="section-title__text">
+                <span>
+                  Дополнительно
+                </span>
+              </h2>
+            </div>
             <fieldset class="questionnaire__field questionnaire__field-additionally">
               <legend class="visually-hidden">Дополнительно</legend>
               <ul class="questionnaire__list">
                 <li class="questionnaire__item">
-                  <input class="questionnaire__input" id="sweetener" name="additionally" value="sweetener" type="checkbox" checked>
-                  <span class="questionnaire__control-mark"></span>
-                  <label class="questionnaire__label" for="sweetener">Сахарозаменитель</label>
+                  <label class="questionnaire__label" for="sweetener">
+                    <input class="questionnaire__input visually-hidden" id="sweetener" name="additionally" value="sweetener" type="checkbox" checked>
+                    <span class="questionnaire__control-checkbox"></span>
+                    <span class="questionnaire__checkbox-label">Сахарозаменитель</span>
+                  </label>
                 </li>
                 <li class="questionnaire__item">
-                  <input class="questionnaire__input" id="water" name="additionally" value="water" type="checkbox">
-                  <span class="questionnaire__control-mark"></span>
-                  <label class="questionnaire__label" for="water">Питьевая вода</label>
+                  <label class="questionnaire__label" for="water">
+                    <input class="questionnaire__input visually-hidden" id="water" name="additionally" value="water" type="checkbox">
+                    <span class="questionnaire__control-checkbox"></span>
+                    <span class="questionnaire__checkbox-label">Питьевая вода</span>
+                </label>
                 </li>
                 <li class="questionnaire__item">
-                  <input class="questionnaire__input" id="milk" name="additionally" value="milk" type="checkbox">
-                  <span class="questionnaire__control-mark"></span>
-                  <label class="questionnaire__label" for="milk">Молоко</label>
+                  <label class="questionnaire__label" for="milk">
+                    <input class="questionnaire__input visually-hidden" id="milk" name="additionally" value="milk" type="checkbox">
+                    <span class="questionnaire__control-checkbox"></span>
+                    <span class="questionnaire__checkbox-label">Молоко</span>
+                  </label>
                 </li>
                 <li class="questionnaire__item">
-                  <input class="questionnaire__input" id="vitamins" name="additionally" value="vitamins" type="checkbox">
-                  <span class="questionnaire__control-mark"></span>
-                  <label class="questionnaire__label" for="vitamins">Витамины</label>
+                  <label class="questionnaire__label" for="vitamins">
+                    <input class="questionnaire__input visually-hidden" id="vitamins" name="additionally" value="vitamins" type="checkbox">
+                    <span class="questionnaire__control-checkbox"></span>
+                    <span class="questionnaire__checkbox-label">Витамины</span>
+                </label>
                 </li>
               </ul>
             </fieldset>
             <div class="questionnaire__required-action">
-              <button class="button" type="submit">отправить заявку</button>
+              <button class="button questionnaire__button" type="submit">отправить заявку</button>
               <span class="questionnaire__required">* — Обязательные поля</span>
             </div>
           </form>
@@ -157,13 +193,15 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Наше место положение</h2>
-          <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
-          <p class="contacts__information">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+        <div class="contacts__position contacts__position--inner">
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">Наше место положение</h2>
+            <h3 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
+            <p class="contacts__information">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
+          </div>
         </div>
-        <div class="contacts__wrapper-map pin">
-          <img src="#" width="320" height="362" alt="Карта с адресом">
+        <div class="contacts__wrapper-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.592652428967!2d30.320214985266986!3d59.9379801802807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1706008957315!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
       <section class="main-footer">
@@ -177,27 +215,29 @@
           <div class="main-footer__social">
             <ul class="main-footer__social-list">
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--vkontakte" href="#">
+                <a class="main-footer__social-link main-footer__social-link--vkontakte" href="#" target="_blank">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--youtube" href="#">
+                <a class="main-footer__social-link main-footer__social-link--youtube" href="#" target="_blank">
                   <span class="visually-hidden">Ютуб</span>
                 </a>
               </li>
               <li class="main-footer__social-item">
-                <a class="main-footer__social-link main-footer__social-link--telegram" href="#">
+                <a class="main-footer__social-link main-footer__social-link--telegram" href="#" target="_blank">
                   <span class="visually-hidden">Телеграм</span>
                 </a>
               </li>
             </ul>
           </div>
           <div class="main-footer__copyright">
-            <a class="main-footer__copyright-link main-footer__copyright-link--logo" href="#">HTML Academy</a>
-            <svg class="main-footer__copyright-link--logo" width="27" height="34">
-              <use href="../../images/icons/stack.svg#html-academy"></use>
-            </svg>
+            <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              HTML Academy
+              <svg class="main-footer__copyright-link--logo" width="27" height="34">
+                <use href="../../images/icons/stack.svg#html-academy"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
