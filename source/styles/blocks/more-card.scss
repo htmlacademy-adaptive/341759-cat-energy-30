@@ -9,7 +9,7 @@
 
 @media (min-width: $tablet-width) {
   .more-card {
-    grid-template-rows: 110px 98px 1fr 40px;
+    grid-template-rows: 110px 95px 1fr 40px;
     padding-bottom: 40px;
     width: 324px;
     height: 430px;
@@ -26,14 +26,14 @@
   }
 }
 
-.more-card_pluse {
+.more-card__pluse {
   margin: 0 auto;
   box-sizing: border-box;
   padding: 25px 0 0;
 }
 
 @media (min-width: $tablet-width) {
-  .more-card_pluse {
+  .more-card__pluse {
     padding-top: 50px;
   }
 }
@@ -48,7 +48,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
-  padding-top: 17px;
+  padding-top: 19px;
 }
 
 @media (min-width: $tablet-width) {

@@ -12,6 +12,7 @@
 @media (min-width: $desktop-width) {
   .additionally__wrapper {
     width: 896px;
+    padding-top: 57px;
   }
 }
 
@@ -40,7 +41,14 @@
 
 @media (min-width: $tablet-width) {
   .additionally__item {
-    padding-bottom: 27px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 708px;
+    margin: 0 auto;
+    padding-bottom: 28px;
     border-left: 1px solid $border-color-second;
     border-right: 1px solid $border-color-second;
   }
@@ -48,6 +56,8 @@
 
 @media (min-width: $desktop-width) {
   .additionally__item {
+    width: 896px;
+    margin: 0 auto;
     padding-bottom: 0;
     border-left: none;
     border-right: none;
@@ -56,25 +66,6 @@
 
 .additionally__item:last-child {
   border-bottom: 1px solid $border-color-second;
-}
-
-@media (min-width: $tablet-width) {
-  .additionally__item {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 708px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .additionally__item {
-    width: 896px;
-    margin: 0 auto;
-  }
 }
 
 .additionally__item-title {
@@ -93,7 +84,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-left: 38px;
-    padding: 26px 0 25px;
+    padding: 25px 0;
   }
 }
 
@@ -102,7 +93,7 @@
     width: 200px;
     margin: 0;
     margin-right: 70px;
-    padding: 25px 0 25px;
+    padding: 25px 0 26px;
   }
 }
 
@@ -115,15 +106,17 @@
 @media (min-width: $tablet-width) {
   .additionally__item-desc {
     justify-content: flex-end;
-    margin-right: 38px;
+    margin-top: 5px;
+    margin-right: 42px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additionally__item-desc {
     justify-content: space-between;
-    width: 285px;
+    width: 315px;
     margin-right: 0;
+    margin-top: 5px;
   }
 }
 
@@ -145,6 +138,17 @@
   .additionally__item-price {
     font-size: 16px;
     line-height: 20px;
+    padding-left: 21px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additionally__item-description,
+  .additionally__item-price {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 8px;
     padding-bottom: 0;
   }
 }

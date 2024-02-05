@@ -1,18 +1,18 @@
-.programs {
+.programs__wrapper {
   width: 280px;
   margin: 0 auto;
   padding: 0;
 }
 
 @media (min-width: $tablet-width) {
-  .programs {
+  .programs__wrapper {
     width: 708px;
     padding-top: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .programs {
+  .programs__wrapper {
     width: 1220px;
     padding-top: 5px;
   }
@@ -75,7 +75,7 @@
 @media (min-width: $desktop-width) {
   .programs__item .programs__item-image {
     left: 35px;
-    top: 38px
+    top: 36px;
   }
 }
 
@@ -94,7 +94,7 @@
 
   @media (min-width: $tablet-width) {
     width: 268px;
-    height: 211px;
+    height: 198px;
 
     &--fat svg {
       width: 140px;
@@ -118,9 +118,9 @@
     }
 
     &--thin svg {
-      width: 134px;
-      height: 56px;
-      padding-top: 20px;
+      width: 135px;
+      height: 57px;
+      padding-top: 10px;
     }
   }
 }
@@ -138,6 +138,7 @@
   background-color: $brand-color;
 
   @media (min-width: $tablet-width) {
+    top: 57%;
     width: 200px;
     height: 200px;
   }

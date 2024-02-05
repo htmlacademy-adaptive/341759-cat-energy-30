@@ -11,7 +11,7 @@
     width: 50%;
     height: 694px;
     background-color: $background-color-index;
-    background-image: url("../../images/index-background-desktop-cat@1x.jpg");
+    background-image: image-set(url("../../images/index-background-desktop-cat@1x.jpg") 1x, url("../../images/index-background-desktop-cat@2x.jpg") 2x);
     background-repeat: no-repeat;
     background-position: left;
   }
@@ -84,5 +84,19 @@
   .main-header__logo {
     width: 202px;
     gap: 14px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header--index .main-nav__link {
+    font-size: 20px;
+    color: $second-color-text;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header--index .main-nav__link--current::after {
+    background: $second-color-text;
+    bottom: -11px;
   }
 }

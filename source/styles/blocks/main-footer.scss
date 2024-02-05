@@ -17,6 +17,8 @@
   .main-footer__wrapper {
     width: 708px;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 44px 0;
   }
 }
 
@@ -74,6 +76,13 @@
 @media (min-width: $tablet-width) {
   .main-footer__logo-text {
     padding-bottom: 0;
+    padding-top: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__logo-text {
+    padding-top: 6px;
   }
 }
 
@@ -81,6 +90,12 @@
   max-width: 132px;
   margin: 0 auto;
   padding: 20px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__social {
+    margin: 0 0 0 35px;
+  }
 }
 
 .main-footer__social-list {
@@ -177,6 +192,6 @@
   opacity: 0.3;
 }
 
-.main-footer__copyright-link--logo {
+.main-footer__copyright-link-logo {
   color: $icon_color;
 }

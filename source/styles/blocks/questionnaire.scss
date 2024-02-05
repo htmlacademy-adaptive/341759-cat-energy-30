@@ -35,7 +35,7 @@
   .questionnaire__title {
     font-size: 60px;
     line-height: 60px;
-    padding-top: 37px;
+    padding-top: 36px;
     padding-left: 70px;
     padding-right: 70px;
   }
@@ -54,7 +54,7 @@
   color: $standard-color-text;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 37px 20px 16px;
+  padding: 37px 20px 18px;
 }
 
 @media (min-width: $tablet-width) {
@@ -105,9 +105,10 @@
 .questionnaire__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 22px;
   border: none;
   list-style-type: none;
 }
@@ -211,8 +212,8 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: none;
 }
 
-.questionnaire__field-data .questionnaire__input-error,
-.questionnaire__field-contact .questionnaire__input-error {
+.questionnaire__field-data .questionnaire__input--error,
+.questionnaire__field-contact .questionnaire__input--error {
   border: 1px solid $color-error;
 }
 
@@ -236,10 +237,21 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 
+.questionnaire__field-control .questionnaire__list {
+  gap: 14px;
+  padding-bottom: 18px;
+}
+
 @media (min-width: $tablet-width) {
   .questionnaire__field-control .questionnaire__list {
-    padding: 23px 27px 27px;
+    padding: 23px 27px 26px;
     border: 1px solid $border-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__field-control .questionnaire__list {
+    padding: 24px 27px 25px;
   }
 }
 
@@ -276,6 +288,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: $second-color-text;
   border: 1px solid $border-color-second;
   border-radius: 50%;
+  box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
@@ -380,6 +393,12 @@ input[type="number"]::-webkit-outer-spin-button {
   padding-right: 13px;
 }
 
+@media (min-width: $tablet-width) {
+  .questionnaire__field-contact .questionnaire__label {
+    padding-right: 14px;
+  }
+}
+
 .questionnaire__field-contact .questionnaire__input {
   flex-grow: 1;
   min-width: 50px;
@@ -392,7 +411,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (min-width: $tablet-width) {
   .questionnaire__field-contact .questionnaire__input {
-    padding: 17px 34px 11px 20px;
+    padding: 16px 34px 12px 20px;
   }
 }
 
@@ -418,6 +437,13 @@ input[type="number"]::-webkit-outer-spin-button {
   mask-repeat: no-repeat;
   width: 20px;
   height: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__icon-email,
+  .questionnaire__icon-phone {
+    right: 16px;
+  }
 }
 
 .questionnaire__field-contact .questionnaire__input:focus .questionnaire__icon-phone {
@@ -477,7 +503,7 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
   padding: 14px;
   resize: none;
-  width: 280px;
+  width: 250px;
   min-height: 120px;
   border-color: $border-color;
 }
@@ -487,8 +513,8 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 628px;
     font-size: 20px;
     line-height: 30px;
-    padding: 14px 20px;
-    min-height: 178px;
+    padding: 11px 20px 14px;
+    min-height: 175px;
     box-sizing: border-box;
   }
 }
@@ -496,7 +522,8 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (min-width: $desktop-width) {
   .questionnaire__field-comment textarea {
     width: 1220px;
-    padding-top: 10px;
+    padding-top: 8px;
+    padding-left: 19px;
   }
 }
 
@@ -532,7 +559,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .questionnaire__field-additionally .questionnaire__list {
-  gap: 13px;
+  gap: 12px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -571,7 +598,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .questionnaire__input[type="checkbox"]:checked + .questionnaire__control-checkbox {
-  background-image: url(../../images/icons/checkbox.svg);
+  background-image: url("../../images/icons/checkbox.svg");
   background-repeat: no-repeat;
   background-size: 18px 14px;
   background-position: center;
@@ -602,7 +629,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .questionnaire__required-action {
   display: flex;
   flex-direction: column;
-  padding: 30px 20px 32px;
+  padding: 35px 20px 30px;
 }
 
 @media (min-width: $tablet-width) {
@@ -620,7 +647,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .questionnaire__required-action {
     width: 1220px;
     margin: 0 auto;
-    padding: 60px 0 79px;
+    padding: 60px 0 78px;
   }
 }
 
@@ -657,6 +684,13 @@ input[type="number"]::-webkit-outer-spin-button {
     line-height: 16px;
     margin: 0;
     padding-top: 17px;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__required {
+    padding-top: 18px;
     padding-left: 0;
   }
 }
