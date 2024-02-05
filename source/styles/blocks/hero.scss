@@ -9,7 +9,7 @@
 .hero::after {
   content: "";
   position: absolute;
-  background-image: url("../../images/index-background-mobile@2x.jpg");
+  background-image: image-set(url("../../images/index-background-mobile@1x.jpg") 1x, url("../../images/index-background-mobile@2x.jpg") 2x);
   background-size: cover;
   top: 50%;
   left: 50%;

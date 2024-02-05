@@ -12,7 +12,7 @@
 @media (min-width: $desktop-width) {
   .example {
     border-top: none;
-    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 75%, rgba(255, 255, 255, 1) 75%);
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 74%, rgba(255, 255, 255, 1) 74%);
   }
 }
 
@@ -57,7 +57,7 @@
 
 @media (min-width: $desktop-width) {
   .example__title {
-    padding-top: 22px;
+    padding-top: 23px;
     padding-bottom: 76px;
   }
 }
@@ -110,15 +110,15 @@
 @media (min-width: $tablet-width) {
   .example__list {
     justify-content: flex-start;
-    gap: 38px;
-    padding-bottom: 99px;
+    gap: 43px;
+    padding-bottom: 104px;
   }
 }
 
 
 @media (min-width: $desktop-width) {
   .example__list {
-    padding-bottom: 55px;
+    padding-bottom: 56px;
   }
 }
 
@@ -136,9 +136,9 @@
 
 @media (min-width: $tablet-width) {
   .example__item {
-    width: 162px;
+    width: 160px;
     padding-top: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
   }
 }
 
@@ -173,7 +173,7 @@
 
 @media (min-width: $tablet-width) {
   .example__text {
-    top: 64px;
+    top: 62px;
     width: 96px;
     font-size: 14px;
     line-height: 14px;

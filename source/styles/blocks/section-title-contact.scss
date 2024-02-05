@@ -1,27 +1,26 @@
-.section-title {
+.section-title-contact {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  padding: 25px 0 35px;
+  padding: 28px 0 36px;
   box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
-  .section-title {
+  .section-title-contact {
     max-width: 708px;
-    padding: 67px 0 80px;
+    padding: 65px 0 75px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .section-title {
+  .section-title-contact {
     max-width: 1290px;
-    padding-top: 76px;
-    padding-bottom: 22px;
+    padding-top: 70px;
   }
 }
 
-.section-title__text {
+.section-title-contact__text {
   position: relative;
   font-family: $content-font;
   font-size: 24px;
@@ -33,36 +32,30 @@
 }
 
 @media (min-width: $tablet-width) {
-  .section-title__text {
+  .section-title-contact__text {
     font-size: 36px;
     line-height: 36px;
   }
 }
 
-.section-title__text::after {
+.section-title-contact__text::after {
   position: absolute;
   content: "";
   width: 100vw;
   height: 2px;
   left: calc(50% - 50vw);
-  top: 15px;
+  top: 14px;
   z-index: 0;
   background-color: $brand-color;
 }
 
 @media (min-width: $tablet-width) {
-  .section-title__text::after {
+  .section-title-contact__text::after {
     top: 22px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .section-title__text::after {
-    top: 23px;
-  }
-}
-
-.section-title__text span {
+.section-title-contact__text span {
   position: relative;
   padding: 0 20px;
   z-index: 10;
@@ -71,13 +64,19 @@
 }
 
 @media (min-width: $tablet-width) {
-  .section-title__text span {
+  .section-title-contact__text span {
     padding: 0 40px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .section-title__text span {
+  .section-title-contact__text span {
     padding: 0 35px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .section-title-contact br {
+    display: none;
   }
 }
